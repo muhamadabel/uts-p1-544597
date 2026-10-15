@@ -1,0 +1,68 @@
+services:
+  database:
+    image: mysql:8.0
+    container_name: uts_database
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-rootsecret}
+      MYSQL_DATABASE: ${DB_DATABASE:-uts_geardb}
+      MYSQL_USER: ${DB_USERNAME:-gear_admin}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-gear_secret123}
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - uts_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      network: host
+    container_name: uts_backend
+    restart: unless-stopped
+    environment:
+      APP_NAME: "${APP_NAME:-UTS_Gear_Backend}"
+      APP_ENV: "${APP_ENV:-production}"
+      APP_KEY: "${APP_KEY}"
+      APP_DEBUG: "${APP_DEBUG:-false}"
+      APP_URL: "http://localhost:8000"
+      DB_CONNECTION: mysql
+      DB_HOST: database
+      DB_PORT: 3306
+      DB_DATABASE: ${DB_DATABASE:-uts_geardb}
+      DB_USERNAME: ${DB_USERNAME:-gear_admin}
+      DB_PASSWORD: ${DB_PASSWORD:-gear_secret123}
+    ports:
+      - "8000:8000"
+    depends_on:
+      database:
+        condition: service_healthy
+    networks:
+      - uts_network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: uts_frontend
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - uts_network
+
+volumes:
+  db_data:
+    name: uts_gear_db_data
+
+networks:
+  uts_network:
+    name: uts_gear_network
+    driver: bridge
