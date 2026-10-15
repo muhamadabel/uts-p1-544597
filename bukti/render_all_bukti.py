@@ -86,9 +86,9 @@ def render_browser_mockup(title, url, out_name):
     # Web Header
     d.rectangle([0, bar_h, width, bar_h + 60], fill="#ffffff")
     d.line([0, bar_h + 60, width, bar_h + 60], fill="#e2e8f0", width=1)
-    d.rounded_rectangle([24, bar_h + 14, 120, bar_h + 46], radius=4, fill="#0E0E12")
-    d.text((34, bar_h + 22), "HONG FILMS", fill="#ffffff", font=font_ui)
-    d.text((135, bar_h + 20), "Gear Inventory System (UTS KEPL 544597)", fill="#0E0E12", font=font_bold)
+    d.rounded_rectangle([24, bar_h + 14, 150, bar_h + 46], radius=4, fill="#0E0E12")
+    d.text((34, bar_h + 22), "GEAR SYSTEM", fill="#ffffff", font=font_ui)
+    d.text((165, bar_h + 20), "Equipment Management System (UTS KEPL 544597)", fill="#0E0E12", font=font_bold)
     d.text((width - 240, bar_h + 22), "Masuk sebagai: Abel Producer", fill="#64748b", font=font_ui)
 
     # Card Form

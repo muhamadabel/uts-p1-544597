@@ -13,9 +13,9 @@ class DatabaseSeeder extends Seeder
     {
         // User admin untuk pengujian dan login frontend
         User::firstOrCreate(
-            ['email' => 'admin@hongfilms.com'],
+            ['email' => 'admin@ugm.ac.id'],
             [
-                'name' => 'Abel Producer',
+                'name' => 'Abel Administrator',
                 'password' => Hash::make('password123'),
             ]
         );

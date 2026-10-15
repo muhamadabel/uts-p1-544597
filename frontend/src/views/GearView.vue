@@ -3,8 +3,8 @@
     <!-- Navbar -->
     <nav class="top-nav">
       <div class="nav-brand">
-        <span class="brand-tag">HONG FILMS</span>
-        <span class="nav-title">Gear Inventory System</span>
+        <span class="brand-tag">GEAR INVENTORY</span>
+        <span class="nav-title">Equipment Management System</span>
       </div>
       <div class="nav-user">
         <span class="user-greeting">Masuk sebagai: <strong>{{ userName }}</strong></span>

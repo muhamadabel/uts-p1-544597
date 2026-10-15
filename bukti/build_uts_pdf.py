@@ -88,7 +88,7 @@ story += [
     Paragraph(
         "Laporan ini mendokumentasikan implementasi lengkap sistem perangkat lunak untuk Ujian Tengah Semester mata kuliah "
         "Konstruksi dan Evolusi Perangkat Lunak. Sistem yang dibangun mengadopsi tema <b>Production Gear &amp; Equipment Management "
-        "(Hong Films)</b>, yaitu platform inventaris peralatan produksi film (kamera, lensa, pencahayaan, audio, dan stabilizer). "
+        "(Sistem Manajemen Inventaris Peralatan Produksi Multimedia)</b>, yaitu platform inventaris peralatan rekaman dan studio (kamera, lensa, pencahayaan, audio, dan stabilizer). "
         "Tema ini orisinal dan berbeda dari tema tugas-tugas praktikum sebelumnya.",
         BODY
     ),

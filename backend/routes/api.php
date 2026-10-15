@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 | API Routes - UTS Konstruksi & Evolusi Perangkat Lunak
 | Mahasiswa: Muhammad Abel Abhinaya Riananto (544597)
-| Tema: Production Gear & Equipment Management (Hong Films)
+| Tema: Sistem Inventaris Peralatan Produksi Multimedia & Laboratorium
 |--------------------------------------------------------------------------
 */
 

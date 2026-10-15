@@ -2,9 +2,9 @@
   <div class="login-wrapper">
     <div class="login-card">
       <div class="brand-header">
-        <div class="brand-badge">HONG FILMS</div>
-        <h2>Production Gear Management</h2>
-        <p class="subtitle">Sistem Inventaris Alat Produksi (UTS KEPL 544597)</p>
+        <div class="brand-badge">GEAR INVENTORY</div>
+        <h2>Equipment Management System</h2>
+        <p class="subtitle">Sistem Inventaris Alat Produksi Multimedia (UTS KEPL 544597)</p>
       </div>
 
       <form @submit.prevent="handleLogin" class="auth-form">
@@ -50,7 +50,7 @@ import { useRouter } from 'vue-router';
 import apiClient from '../api/axios';
 
 const router = useRouter();
-const email = ref('admin@hongfilms.com');
+const email = ref('admin@ugm.ac.id');
 const password = ref('password123');
 const errorMessage = ref('');
 const loading = ref(false);

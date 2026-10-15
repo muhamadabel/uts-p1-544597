@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "c1f7b889-544597-4b72-91ef-gearsapi0001",
 		"name": "UTS KEPL - Gear Inventory API (544597)",
-		"description": "Postman Collection untuk Ujian Tengah Semester Konstruksi & Evolusi Perangkat Lunak.\nMahasiswa: Muhammad Abel Abhinaya Riananto (544597)\nTema: Production Gear & Equipment Management (Hong Films)",
+		"description": "Postman Collection untuk Ujian Tengah Semester Konstruksi & Evolusi Perangkat Lunak.\nMahasiswa: Muhammad Abel Abhinaya Riananto (544597)\nTema: Sistem Inventaris Peralatan Produksi Multimedia & Laboratorium",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
